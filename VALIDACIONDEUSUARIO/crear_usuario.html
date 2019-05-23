@@ -24,41 +24,48 @@
         <h1> Creación de nuevos usuarios </h1>
     </header>
     <section>
-        <form method="POST" action="../controladores/crear_usuario.php" onsubmit=" return validarCamposObligatorios()">
-            <label>Cédula:</label>
-            <input id ="cedula" name="cedula" placeholder="Número de Cédula" onblur="return ValidacionDeCedula(this)">
-            <span id="mensajeCedula" class="error"></span>
+        <form method="POST" action="controladores/bienvenido.html" onsubmit=" return validarCamposObligatorios()">
 
-            <label>Nombres:</label>
-            <input id ="nombres" name="nombres" placeholder="Ingrese sus Nombres" onkeyup="return validarLetras('nombres')">
-            <span id="mensajeNombre" class="error"></span>
 
-            <label>Apellidos:</label>
-            <input id ="apellidos" name="apellidos" placeholder="Ingrese sus Apellidos" onkeyup="return validarLetras('apellidos')">
-            <span id="mensajeApellido" class="error"></span>
+            <label for="cedula">Cédula:</label>
+            <input type="text" id ="cedula" name="cedula" placeholder="Número de Cédula" onkeyup = "validarNumeros(this)" onblur = "return ValidacionDeCedula(this)"> 
+            <span id="mensajeCedula" ></span>
 
-            <label>Dirección:</label>
-            <input id ="direccion" name="direccion" placeholder="Ingrese la direccion" >
-            <span id="mensajeDireccion" class="error"></span>
+            <label for="nombres">Nombres:</label>
+            <input type="text"  id ="nombres" name="nombres" placeholder="Ingrese sus Nombres" onkeyup="validarLetras(this)">
+            <span id="mensajeNombre" ></span>
 
-            <label>Teléfono:</label>
-            <input id ="telefono" name="telefono" placeholder="Ingrese el numero de telefono" onkeyup="return validarNumeros('telefono')" >
-            <span id="mensajeTelefono" class="error"></span>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text"  id ="apellidos" name="apellidos" placeholder="Ingrese sus Apellidos" onkeyup="validarLetras(this)">
+            <span id="mensajeApellido" ></span>
 
-            <label>Correo Electrónico:</label>
-            <input id ="correo" name="correo" type="email" placeholder="ingrese el Correo" onblur="return validarCorreo(this)">
-            <span id="mensajeCorreo" class="error"></span>
+            <label for="direccion">Dirección:</label>
+            <input type="text"  id ="direccion" name="direccion" placeholder="Ingrese la direccion">
+            <span id="mensajeDireccion" ></span>
 
-            <label>Password:</label>
-            <input id ="contraseña" name="contraseña"  placeholder="Ingrese el password" >
-            <span id="mensajeContraseña" class="error"></span>
+            <label for="telefono">telefono:</label>
+            <input type="text"   id ="telefono" name="telefono" placeholder="Ingrese el numero de telefono" onkeyup="validarNumeros(this)">
+            <span id="mensajeTelefono" ></span>
+            
 
-            <label>Fecha de Nacimiento:</label>
-            <input id ="fechaNacimiento" name="fechaNacimiento" type="date" placeholder="23/04/1982" onblur="return valFecha(this) " >
-            <span id="mensajeFechaNacimiento" class="error"></span>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="text"  id ="correo" name="correo"  placeholder="ingrese el Correo" onblur="return validarCorreo(this)">
+            <span id="mensajeCorreo" ></span>
 
-            <button id="button" type="submit"> Guardar </button>
-            <button id="button" type="reset"> Cancelar </button>
+                        
+            <label for="contraseña">Password:</label>
+            <input type="password"  id ="Contraseña" name="contraseña" placeholder="Ingrese el password" >
+            <span id="mensajeContraseña" ></span>
+
+
+            <label for="Fecha de Nacimiento">Fecha de Nacimiento:</label>
+            <input type="text"  id ="FechaDeNacimiento" name="FechaDeNacimiento" placeholder="23/04/1982" onblur="valFecha(this)">
+            <span id="mensajeFechaNacimiento" ></span>
+
+            <input id="button" type="submit" value="Enviar">
+            <input id="button" type="reset" value="Cancelar">
+
+
         </form>
     </section>
 </body>
