@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <script src="js/fun.js"></script>
+    <link rel="stylesheet" href="style/estilo.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="window-controls">
+            <div class="window-controls--left">
+                <span>
+                    <i class="demo-icon icon-calc"></i>
+                </span>
+                <span>Calculadora</span>
+            </div>
+
+        </div>
+        <div class="keyboard">
+            <form name="f1">
+                <div class="display">
+                    <input type="text" class="display__top" name="txtcaja1" id="valores1" readonly>
+                    <input type="text" class="display__bottom"  name="txtcaja2" id="valores2" readonly>
+                </div>
+               
+                <table>
+                    <tr>
+                      
+                        <td ><input class="keyboard__btn"  type="button" value="&larr;" onclick="eliminarcaracter()" ></td> 
+                        <td><input class="keyboard__btn" type="button" value="CE" onClick="document.f1.txtcaja2.value='0'"></td>
+                        <td><input class="keyboard__btn" type="button" value="C" onClick="document.f1.reset(); blocdel = false;"></td>
+                        <td><input class="keyboard__btn" type="button" value="±" onclick="masmenos()"></td>
+                        <td><input class="keyboard__btn" type="button" value="√" onclick="raiz()"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="keyboard__btn" type="button" value="7" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="8" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="9" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="/" onclick="Operaciones('/')"></td>
+                        <td><input class="keyboard__btn" type="button" value="%" onclick="Operaciones('%')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="keyboard__btn" type="button" value="4" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="5" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="6" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="*" onclick="Operaciones('*')"></td>
+                        <td><input class="keyboard__btn" type="button" value="1/x" onclick="escribirNumero('7')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="keyboard__btn" type="button" value="1" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="2" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="3" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="-" onclick="Operaciones('-')"></td>
+                        <td rowspan="2"><input type="button" class="btn_tam" value="=" onClick="calcular()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="btn_tamaño" type="button" value="0" onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="." onclick="escribirNumero(this.value)"></td>
+                        <td><input class="keyboard__btn" type="button" value="+" onclick="Operaciones('+')"></td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
