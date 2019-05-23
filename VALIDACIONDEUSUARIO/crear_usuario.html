@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!--
+    Programación Hypermedial
+    Ingeniería de Sistemas
+    Séptimo Ciclo
+    
+    Author: Jorge Arévalo
+    Date: 15/05/2019  
+
+    Filename: envio.html
+   -->
+
+    <meta charset="utf-8" />
+    <title>PHP</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/validaciones.js"></script>
+</head>
+
+<body>
+    <header class="cab">
+        <h1> Creación de nuevos usuarios </h1>
+    </header>
+    <section>
+        <form method="POST" action="../controladores/crear_usuario.php" onsubmit=" return validarCamposObligatorios()">
+            <label>Cédula:</label>
+            <input id ="cedula" name="cedula" placeholder="Número de Cédula" onblur="return ValidacionDeCedula(this)">
+            <span id="mensajeCedula" class="error"></span>
+
+            <label>Nombres:</label>
+            <input id ="nombres" name="nombres" placeholder="Ingrese sus Nombres" onkeyup="return validarLetras('nombres')">
+            <span id="mensajeNombre" class="error"></span>
+
+            <label>Apellidos:</label>
+            <input id ="apellidos" name="apellidos" placeholder="Ingrese sus Apellidos" onkeyup="return validarLetras('apellidos')">
+            <span id="mensajeApellido" class="error"></span>
+
+            <label>Dirección:</label>
+            <input id ="direccion" name="direccion" placeholder="Ingrese la direccion" >
+            <span id="mensajeDireccion" class="error"></span>
+
+            <label>Teléfono:</label>
+            <input id ="telefono" name="telefono" placeholder="Ingrese el numero de telefono" onkeyup="return validarNumeros('telefono')" >
+            <span id="mensajeTelefono" class="error"></span>
+
+            <label>Correo Electrónico:</label>
+            <input id ="correo" name="correo" type="email" placeholder="ingrese el Correo" onblur="return validarCorreo(this)">
+            <span id="mensajeCorreo" class="error"></span>
+
+            <label>Password:</label>
+            <input id ="contraseña" name="contraseña"  placeholder="Ingrese el password" >
+            <span id="mensajeContraseña" class="error"></span>
+
+            <label>Fecha de Nacimiento:</label>
+            <input id ="fechaNacimiento" name="fechaNacimiento" type="date" placeholder="23/04/1982" onblur="return valFecha(this) " >
+            <span id="mensajeFechaNacimiento" class="error"></span>
+
+            <button id="button" type="submit"> Guardar </button>
+            <button id="button" type="reset"> Cancelar </button>
+        </form>
+    </section>
+</body>
+
+</html>

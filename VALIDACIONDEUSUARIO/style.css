@@ -1,0 +1,29 @@
+label {
+    margin-top: 40px;
+}
+
+form {
+    margin-left: 40px;
+    width: 400px;
+    float: left;
+}
+
+input {
+    width: 380px;
+    height: 27px;
+}
+
+#button {
+    width: 100px;
+    height: 35px;
+}
+/*
+header.cab {
+    background-color: aqua;
+}
+*/
+/*
+body {
+    background-color: aliceblue;
+}
+*/
